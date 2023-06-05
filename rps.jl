@@ -52,10 +52,7 @@ function RPS(N, epochs, P, initial)
     return env, pop
 end
 
-# write documentation
-"
-
-"
+"rock- paper-scissor population dynamics with global interactions"
 function RPSLattice(n, epochs, P, initial; interaction_range=1, mutation=[0, 0, 0], mutation_patience=0, mutation_type="none")
     env=zeros(Int, n,n)
     
@@ -79,7 +76,7 @@ function RPSLattice(n, epochs, P, initial; interaction_range=1, mutation=[0, 0, 
     end
     mean_aggr=[]
   
-    # evolutio of the population with short-range interactions
+    # evolution of the population with short-range interactions
     if epochs==1
         return env, pop
     end 
@@ -143,5 +140,5 @@ function RPSLattice(n, epochs, P, initial; interaction_range=1, mutation=[0, 0, 
     return env, pop, aggressivity, mean_aggr
 end
 
-# simulation with a disease that lowers the aggressivity of the population
+
 
